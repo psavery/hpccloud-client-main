@@ -12,6 +12,6 @@ export default authRedirect(
     name: 'home',
     inject: ['girderRest'],
   },
-  '/projects'
+  '/profile'
 );
 </script>

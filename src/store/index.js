@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
+import active from './active';
 import http from './http';
 
 // Install VueX
@@ -12,6 +13,7 @@ function createStore() {
       ready: false,
     },
     modules: {
+      active,
       http,
     },
     getters: {
@@ -22,7 +24,6 @@ function createStore() {
     actions: {
       LOGOUT({ dispatch }) {
         dispatch('HTTP_LOGOUT');
-        dispatch('PROJECTS_CLEAR');
       },
       async GIRDER_INITIALIZE({ commit, dispatch, state }, girderClient) {
         commit('HTTP_CLIENT_SET', girderClient);
@@ -30,9 +31,6 @@ function createStore() {
         girderClient.$on('login', (user) => {
           dispatch('UPDATE_USER', user);
           dispatch('HTTP_CONNECT_EVENTS');
-
-          // Fetch any user specific data
-          dispatch('CLUSTERS_FETCH');
         });
         girderClient.$on('logout', () => {
           dispatch('UPDATE_USER', null);
@@ -45,8 +43,7 @@ function createStore() {
 
         state.ready = true;
       },
-      async UPDATE_USER({ commit, dispatch }, user) {
-        dispatch('PROJECTS_CLEAR');
+      async UPDATE_USER({ commit }, user) {
         commit('ACTIVE_USER_SET', user);
       },
     },

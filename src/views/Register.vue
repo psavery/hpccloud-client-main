@@ -21,7 +21,7 @@ export default authRedirect(
       },
     },
   },
-  '/projects'
+  '/profile'
 );
 </script>
 

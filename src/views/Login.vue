@@ -21,13 +21,13 @@ export default authRedirect(
       },
     },
   },
-  '/projects'
+  '/profile'
 );
 </script>
 
 <template>
   <girder-login
     :oauth-providers="oauthProviders"
-    forgot-password-url="/resetPassword"
+    forgot-password-url="/#/resetPassword"
   />
 </template>
