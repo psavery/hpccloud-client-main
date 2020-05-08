@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@girder/components": "^2.2.2",
+    "@mdi/font": "^5.1.45",
     "@vue/eslint-config-airbnb": "^5.0.2",
     "@vue/eslint-config-prettier": "^6.0.0",
     "core-js": "^3.6.5",
