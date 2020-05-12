@@ -2,7 +2,7 @@ import ParFlow from '@/views/Workflows/ParFlow';
 
 export default [
   {
-    path: '/ParFlow',
+    path: '/parFlow',
     name: 'ParFlow',
     component: ParFlow,
   },

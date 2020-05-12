@@ -1,13 +1,5 @@
-import SelectProject from '@/views/Projects/Select';
-import AuthenticationRoutes from './AuthenticationRoutes';
-import WorkflowRoutes from './WorkflowRoutes';
+import Authentication from './Authentication';
+import Projects from './Projects';
+import Workflows from './Workflows';
 
-export default [
-  ...AuthenticationRoutes,
-  ...WorkflowRoutes,
-  {
-    path: '/projects',
-    name: 'projects',
-    component: SelectProject,
-  },
-];
+export default [...Authentication, ...Projects, ...Workflows];
