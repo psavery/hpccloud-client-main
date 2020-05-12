@@ -19,13 +19,13 @@
 </template>
 
 <script>
-import { authRedirect } from '@/src/utils/RedirectHelper';
+import { authRedirect } from '@/utils/RedirectHelper';
 
 export default authRedirect(
   {
     name: 'home',
     inject: ['girderRest'],
   },
-  '/profile'
+  '/Projects'
 );
 </script>

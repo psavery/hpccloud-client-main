@@ -1,6 +1,6 @@
 <script>
 import GirderRegister from '@girder/components/src/components/Authentication/Register.vue';
-import { authRedirect } from '@/src/utils/RedirectHelper';
+import { authRedirect } from '@/utils/RedirectHelper';
 
 export default authRedirect(
   {
@@ -21,7 +21,7 @@ export default authRedirect(
       },
     },
   },
-  '/profile'
+  '/Projects'
 );
 </script>
 

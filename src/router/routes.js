@@ -1,29 +1,13 @@
-import Home from '@/src/views/Home.vue';
+import SelectProject from '@/views/Projects/Select';
+import AuthenticationRoutes from './AuthenticationRoutes';
+import WorkflowRoutes from './WorkflowRoutes';
 
 export default [
+  ...AuthenticationRoutes,
+  ...WorkflowRoutes,
   {
-    path: '/',
-    name: 'home',
-    component: Home,
-  },
-  {
-    path: '/login',
-    name: 'login',
-    component: () =>
-      import(/* webpackChunkName: "login" */ '@/src/views/Login.vue'),
-  },
-  {
-    path: '/register',
-    name: 'register',
-    component: () =>
-      import(/* webpackChunkName: "register" */ '@/src/views/Register.vue'),
-  },
-  {
-    path: '/resetPassword',
-    name: 'resetPassword',
-    component: () =>
-      import(
-        /* webpackChunkName: "resetPassword" */ '@/src/views/ResetPassword.vue'
-      ),
+    path: '/projects',
+    name: 'projects',
+    component: SelectProject,
   },
 ];

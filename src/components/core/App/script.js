@@ -1,6 +1,6 @@
 import { mapActions } from 'vuex';
 
-import logo from '@/src/assets/logo.svg';
+import logo from '@/assets/logo.svg';
 import md5 from 'md5';
 
 export default {
